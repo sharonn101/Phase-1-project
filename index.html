@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cocktail Recipe App</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <nav>
+        <div class="nav-left">
+      <p>🍹SIP & CHILL</p>
+      <button>Home</button>
+      <button>Recipes</button>
+      <button>Ingridients</button>
+      <button>Favorites</button>
+        </div>
+
+        <div class="search-container">
+      <input type="text" placeholder="Search" id="search-input" />
+      <span class="search-icon">🔍</span>
+        </div>
+    </nav>
+<div class="background">
+    <header>
+        <input type="text" placeholder="Search for a cocktail..." id="search-header" /><br>
+        <select class="select">
+            <option value="all">Categories</option>
+            <option value="ordinary">Ordinary drink</option>
+            <option value="other">Other</option>
+        </select>
+        <select class="select">
+            <option value="all">Ingredients</option>
+            <option value="tequilla">Tequilla</option>
+            <option value="triple sec">Triple sec</option>
+            <option value="lime-juice">Lime juice</option>
+            <option value="salt">Salt</option>
+            <option value="blue-curacco">Blue curacco</option>
+            <option value="agave-syrup">Agave Syrup</option>
+            <option value="ice">Ice</option>
+            <option value="cream-of-coconut">Cream of coconut</option>
+            <option value="strawberry-schnapps">Strawberry schnapps</option>
+            <option value="lemon-juice">Lemon Juice</option>
+            <option value="strawberries">Strawberries</option>
+            <option value="watermelon">Watermelon</option>
+            <option value="mint">Mint</option>
+            <option value="grape-fruit-juice">Grapefruit juice</option>
+            <option value="lime">Lime</option>
+        </select>
+        <select class="select">
+            <option value="all">Glass Type</option>
+            <option value="cocktail-glass">Cocktail glass</option>
+            <option value="old-fashioned-glass">Old-fashioned glass</option>
+            <option value="margarrita-glass">Margaritta glass</option>
+            <option value="collins-glass">Collins glass</option>
+        </select>
+        <select class="select">
+            <option value="alcoholic">Alcoholic</option>
+            <option value="non-alcoholic">Non-alcoholic</option>
+        </select>
+    </header><br>
+    <button id="random-recipe" class="fav-random">Surprise me</button>
+    <button id="favorite-recipes" class="fav-random">Add to favorites</button>
+    <div class="recipe-container">
+        <div class="recipe-card">
+            <h2>Margarita</h2>
+            <img src="https://www.thecocktaildb.com/images/media/drink/5noda61589575158.jpg" alt="Margarrita" width="200" />
+            <p>A classic tequilla cocktail with lime juice.</p>
+            <button class="favorite-button">❤️ Add to Favorites</button>
+        </div>
+        <div class="recipe-card">
+            <h2>Blue Margarita</h2>
+            <img src="https://www.thecocktaildb.com/images/media/drink/bry4qh1582751040.jpg" alt="Blue Margarrita" width="200" />
+            <p>A vibrant blue twist on the classic margarrita.</p>
+            <button class="favorite-button">❤️ Add to Favorites</button>
+        </div>
+        <div class="recipe-card">
+            <h2>Tommy's Margarrita</h2>
+            <img src="https://www.thecocktaildb.com/images/media/drink/loezxn1504373874.jpg" alt="Tommy's Margarrita" width="200" />
+            <p>A simple and refreshing margarrita with tequilla, agave and lime.</p>
+            <button class="favorite-button">❤️ Add to Favorites</button>
+        </div>
+        <div class="recipe-card">
+            <h2>Whitecap Margarrita</h2>
+            <img src="https://www.thecocktaildb.com/images/media/drink/srpxxp1441209622.jpg" alt="Whitecap Margarrita" width="200" />
+            <p>A creamy and frothy margarrita with a hint of sweetness.</p>
+            <button class="favorite-button">❤️ Add to Favorites</button>
+        </div>
+        <div class="recipe-card">
+            <h2>Strawberry Margarita</h2>
+            <img src="https://www.thecocktaildb.com/images/media/drink/tqyrpw1439905311.jpg" alt="Strawberry Margarrita" width="200" />
+            <p>A fruity and refreshing margarrita with strawberries.</p>
+            <button class="favorite-button">❤️ Add to Favorites</button>
+        </div>
+        <div class="recipe-card">
+            <h2>Smashed Watermelon Margarrita</h2>
+            <img src="https://www.thecocktaildb.com/images/media/drink/dztcv51598717861.jpg" alt="Watermelon Margarrita" width="200" />
+            <p>A summery margarrita with muddled watermelon and a hint of mint.</p>
+            <button class="favorite-button">❤️ Add to Favorites</button>
+        </div>
+    </div>
+</div>
+</body>
+</html>
