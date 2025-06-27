@@ -56,28 +56,33 @@ document.getElementById('header-button').addEventListener('click', function(e) {
     searchCocktails();
 });
 
-function addToFavorites() {
+function addToFavorites(clonedCard) {
+    let favoritesDiv = document.getElementById('favorites');
 
-   const favoriteHeading = document.createElement('h1');
-   favoriteHeading.id = 'favorites-heading';
-   favoriteHeading.textContent = 'Your Favorite Cocktails';
+    if (!favoritesDiv) {
+        // Create the favorites section if it doesn't exist
+        const favoriteHeading = document.createElement('h1');
+        favoriteHeading.id = 'favorites-heading';
+        favoriteHeading.textContent = 'Your Favorite Cocktails';
 
-   const favoritesDiv = document.createElement('div');
-   favoritesDiv.id = 'favorites';
-   favoritesDiv.classList.add('recipe-container');
-   favoritesDiv.appendChild(favoriteHeading);
+        favoritesDiv = document.createElement('div');
+        favoritesDiv.id = 'favorites';
+        favoritesDiv.classList.add('recipe-container');
+        favoritesDiv.appendChild(favoriteHeading);
 
-   const mainContainer = document.querySelector('#background');
-   const existingFavorites = document.getElementById('favorites');
+        const mainContainer = document.querySelector('#background');
+        mainContainer.appendChild(favoritesDiv);
+    }
 
-   if (existingFavorites) {
-       existingFavorites.remove();
-   }
-   mainContainer.appendChild(favoritesDiv);
+    // Remove the button in the cloned card
+    const btn = clonedCard.querySelector('.favorite-button');
+    if (btn) btn.remove();
 
+    favoritesDiv.appendChild(clonedCard);
 }
 
-document.querySelector('.favorite-button').addEventListener('click', function(e) {
+// Trigger search when button is clicked
+document.getElementById('header-button').addEventListener('click', function (e) {
     e.preventDefault();
-    addToFavorites();
+    searchCocktails();
 });
