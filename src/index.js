@@ -1,4 +1,4 @@
-
+document.addEventListener("DOMContentLoaded", () => {
 
 function searchCocktails() {
 const searchTerm = document.getElementById('search-header').value;
@@ -111,7 +111,8 @@ fetch("https://www.thecocktaildb.com/api/json/v1/1/random.php")
 document.getElementById('random-recipe').addEventListener("click", function(e){
     e.preventDefault();
     surpriseMe();
-})
+});
+});
 
 
 
