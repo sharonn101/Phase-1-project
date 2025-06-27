@@ -99,7 +99,7 @@ body{
 }
 
 #random-recipe {
-  background: linear-gradient(to right , #fff, rgb(197, 240, 240));
+  background: rgb(197, 240, 240);
   color: #111714;
 }
 
