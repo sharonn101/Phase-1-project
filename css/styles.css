@@ -26,7 +26,7 @@ nav p {
 nav button {
   background: none;
   border: none;
-  color: #fff;
+  color: black;
   margin-left: 15px;
   font-size: 16px;
   cursor: pointer;
@@ -49,7 +49,7 @@ nav button:hover {
   padding: 8px 10px 8px 35px;
   border-radius: 20px;
   border: none;
-  background-color: #29382f;
+  background:linear-gradient(to right, #fff, rgb(197, 240, 240));
   color: #fff;
   font-size: 14px;
   outline: none;
@@ -64,10 +64,10 @@ nav button:hover {
   font-size: 16px;
 }
 body{
-  background-color: #111714;
+  background: #fff;
 }
 
-.background {
+#background {
    margin-left: 6%;
    margin-right: 6%;
    padding-top: 3%;
@@ -78,8 +78,8 @@ body{
   padding: 8px 10px 8px 35px;
   border-radius: 20px;
   border: none;
-  background-color: #29382f;
-  color: #fff;
+  background: linear-gradient(to right, #fff, rgb(197, 240, 240));
+  color: black;
   font-size: 14px;
   outline: none;
   margin-bottom: 1%;
@@ -89,8 +89,8 @@ body{
   padding: 8px;
   border-radius: 20px;
   border: none;
-  background-color: #29382f;
-  color: #fff;
+  background:linear-gradient(to right, #fff, rgb(197, 240, 240));
+  color: #111714;
   font-size: 14px;
   outline: none;
   margin-bottom: 0%;
@@ -100,27 +100,27 @@ body{
   padding: 8px;
   border-radius: 20px;
   border: none;
-  background-color: #29382f;
-  color: #fff;
+  background: linear-gradient(to right, #fff, rgb(197, 240, 240));
+  color: #111714;
   font-size: 14px;
   outline: none;
   margin-bottom: 1%;
 }
 
 #random-recipe {
-  background-color: #ffa500;
+  background: linear-gradient(to right , #fff, rgb(197, 240, 240));
   color: #111714;
 }
 
 nav {
-    color: #fff;
+    color: black;
 }
 
 .nav-left p {
-  color: #fff;
+  color: black;
 }
 
-.recipe-container {
+#recipe-container {
   display: flex;
   flex-wrap: wrap;
   gap: 1.5rem;
@@ -130,15 +130,15 @@ nav {
 }
 
 .recipe-card {
-  background-color: #111714;
-  border: 1px solid #29382f;
+  background-color: rgb(197, 240, 240);
+  border: 1px solid #ccc;
   border-radius: 1rem;
   padding: 1rem;
   width: 280px;
   box-shadow: 0 4px 6px rgba(0,0,0,0.1);
   transition: transform 0.2s;
   text-align: center;
-  color:#fff;
+  color: #111714;
 }
 
 .recipe-card:hover {
@@ -167,8 +167,8 @@ nav {
 }
 
 #header-button {
-  background-color: #29382f;
-  color: white;
+  background: linear-gradient(to right , #fff, rgb(197, 240, 240));
+  color: #111714;
   border: none;
   padding: 0.5rem 1rem;
   border-radius: 1rem;
@@ -178,8 +178,14 @@ nav {
 }
 
 .intro {
-  color: #fff;
+  color: black;
   font-size: 20px;
   margin-bottom: 1rem;
   text-align: center;
+}
+
+#search-heading {
+  color: #111714;
+  font-size: 24px;
+  margin-bottom: 1rem;
 }

@@ -1,7 +1,6 @@
 function searchCocktails() {
 const searchTerm = document.getElementById('search-header').value;
 
-    // Remove previous results if they exist
 const existingResults = document.getElementById('results');
     if (existingResults) {
         existingResults.remove();
@@ -14,15 +13,18 @@ fetch("https://www.thecocktaildb.com/api/json/v1/1/search.php?s=" + searchTerm)
 .then(data => {
     const drinks = data.drinks;
 
-    // Create results container
+    const searchHeading = document.createElement('h1');
+    searchHeading.id = 'search-heading';
+    searchHeading.textContent = `Search Results for "${searchTerm}"`;
+
     const resultsContainer = document.createElement('div');
     resultsContainer.id = 'results';
-    resultsContainer.classList.add('recipe-container'); // reuse styling
+    resultsContainer.classList.add('recipe-container');
+    resultsContainer.appendChild(searchHeading);
 
-    // Insert results above recipe cards
-    const mainContainer = document.querySelector('.background');
-    const recipeCards = document.querySelector('.recipe-container');
-    mainContainer.insertBefore(resultsContainer, recipeCards);
+    const mainContainer = document.querySelector('#background');
+    const intro = document.querySelector('.intro');
+    mainContainer.insertBefore(resultsContainer, intro);
 
     if (drinks) {
     drinks.forEach(drink => {
@@ -31,7 +33,8 @@ fetch("https://www.thecocktaildb.com/api/json/v1/1/search.php?s=" + searchTerm)
         drinkDiv.innerHTML = `
             <h2>${drink.strDrink}</h2>
             <img src="${drink.strDrinkThumb}" alt="${drink.strDrink}" width="200">
-            <p>${drink.strInstructions}</p>`;
+            <p>${drink.strInstructions}</p>
+            <button class="favorite-button">Add to Favorites</button>`;
         resultsContainer.appendChild(drinkDiv);
         });
     } else {
@@ -40,8 +43,33 @@ fetch("https://www.thecocktaildb.com/api/json/v1/1/search.php?s=" + searchTerm)
     });
 }
 
-// Run on button click
 document.getElementById('header-button').addEventListener('click', function(e) {
     e.preventDefault();
     searchCocktails();
+});
+
+function addToFavorites() {
+
+   const favoriteHeading = document.createElement('h1');
+   favoriteHeading.id = 'favorites-heading';
+   favoriteHeading.textContent = 'Your Favorite Cocktails';
+
+   const favoritesDiv = document.createElement('div');
+   favoritesDiv.id = 'favorites';
+   favoritesDiv.classList.add('recipe-container');
+   favoritesDiv.appendChild(favoriteHeading);
+
+   const mainContainer = document.querySelector('#background');
+   const existingFavorites = document.getElementById('favorites');
+
+   if (existingFavorites) {
+       existingFavorites.remove();
+   }
+   mainContainer.appendChild(favoritesDiv);
+
+}
+
+document.querySelector('.favorite-button').addEventListener('click', function(e) {
+    e.preventDefault();
+    addToFavorites();
 });
