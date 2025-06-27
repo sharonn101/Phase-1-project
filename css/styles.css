@@ -143,20 +143,6 @@ nav {
   margin-bottom: 1rem;
 }
 
-.favorite-button {
-  background-color: #0d6efd;
-  color: white;
-  border: none;
-  padding: 0.5rem 1rem;
-  border-radius: 1rem;
-  cursor: pointer;
-  font-weight: bold;
-}
-
-.favorite-button:hover {
-  background-color: #0b5ed7;
-}
-
 #header-button {
   background: linear-gradient(to right , #fff, rgb(197, 240, 240));
   color: #111714;
