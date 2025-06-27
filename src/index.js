@@ -41,8 +41,8 @@ fetch("https://www.thecocktaildb.com/api/json/v1/1/search.php?s=" + searchTerm)
                 ${Object.keys(drink).filter(key => key.startsWith('strIngredient') && drink[key])
                     .map(key => `<li>${drink[key]} - ${drink[`strMeasure${key.slice(-1)}`] || ''}</li>`).join('')}
             </ul>
-            <p>${drink.strInstructions}</p>
-            <button class="favorite-button">Add to Favorites</button>`;
+            <p>${drink.strInstructions}</p>`;
+
         resultsContainer.appendChild(drinkDiv);
         });
     } else {
@@ -56,33 +56,6 @@ document.getElementById('header-button').addEventListener('click', function(e) {
     searchCocktails();
 });
 
-function addToFavorites(clonedCard) {
-    let favoritesDiv = document.getElementById('favorites');
 
-    if (!favoritesDiv) {
-        // Create the favorites section if it doesn't exist
-        const favoriteHeading = document.createElement('h1');
-        favoriteHeading.id = 'favorites-heading';
-        favoriteHeading.textContent = 'Your Favorite Cocktails';
 
-        favoritesDiv = document.createElement('div');
-        favoritesDiv.id = 'favorites';
-        favoritesDiv.classList.add('recipe-container');
-        favoritesDiv.appendChild(favoriteHeading);
 
-        const mainContainer = document.querySelector('#background');
-        mainContainer.appendChild(favoritesDiv);
-    }
-
-    // Remove the button in the cloned card
-    const btn = clonedCard.querySelector('.favorite-button');
-    if (btn) btn.remove();
-
-    favoritesDiv.appendChild(clonedCard);
-}
-
-// Trigger search when button is clicked
-document.getElementById('header-button').addEventListener('click', function (e) {
-    e.preventDefault();
-    searchCocktails();
-});
