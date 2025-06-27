@@ -9,62 +9,27 @@
 <body>
     <nav>
         <div class="nav-left">
-      <p>🍹SIP & CHILL</p>
+      <p class="nav-p">🍹</p>
+      <p class="nav-p">SIP & CHILL</p>
       <button><a href="#background">Home</a></button>
-      <button><a href="#recipe-container">Recipes</a></button>
-      <button>Ingridients</button>
       <button>Favorites</button>
         </div>
 
-        <div class="search-container">
-      <input type="text" placeholder="Search" id="search-input" />
-      <span class="search-icon">🔍</span>
-        </div>
     </nav>
 <div id="background">
     <header>
         <input type="text" placeholder="Search for a cocktail..." id="search-header" />
         <button id="header-button">Search</button><br>
-        <select class="select">
-            <option value="all">Categories</option>
-            <option value="ordinary">Ordinary drink</option>
-            <option value="other">Other</option>
-        </select>
-        <select class="select">
-            <option value="all">Ingredients</option>
-            <option value="tequilla">Tequilla</option>
-            <option value="triple sec">Triple sec</option>
-            <option value="lime-juice">Lime juice</option>
-            <option value="salt">Salt</option>
-            <option value="blue-curacco">Blue curacco</option>
-            <option value="agave-syrup">Agave Syrup</option>
-            <option value="ice">Ice</option>
-            <option value="cream-of-coconut">Cream of coconut</option>
-            <option value="strawberry-schnapps">Strawberry schnapps</option>
-            <option value="lemon-juice">Lemon Juice</option>
-            <option value="strawberries">Strawberries</option>
-            <option value="watermelon">Watermelon</option>
-            <option value="mint">Mint</option>
-            <option value="grape-fruit-juice">Grapefruit juice</option>
-            <option value="lime">Lime</option>
-        </select>
-        <select class="select">
-            <option value="all">Glass Type</option>
-            <option value="cocktail-glass">Cocktail glass</option>
-            <option value="old-fashioned-glass">Old-fashioned glass</option>
-            <option value="margarrita-glass">Margaritta glass</option>
-            <option value="collins-glass">Collins glass</option>
-        </select>
-        <select class="select">
-            <option value="alcoholic">Alcoholic</option>
-            <option value="non-alcoholic">Non-alcoholic</option>
-        </select>
     </header><br>
+
+    <div id="fav-random-buttons">
     <button id="random-recipe" class="fav-random">Surprise me</button>
     <button id="favorite-recipes" class="fav-random">Add to favorites</button>
+    </div>
+
     <h1 class="intro">Popular Margarita Recipes</h1>
     <p class="intro">Discover the best margarita recipes from around the world. From classic to creative.</p>
-    <div id="recipe-container">
+    <div class="recipe-container">
         <div class="recipe-card">
             <h2>Margarita</h2>
             <img src="https://www.thecocktaildb.com/images/media/drink/5noda61589575158.jpg" alt="Margarrita" width="200" />
@@ -102,6 +67,7 @@
             <button class="favorite-button">Add to Favorites</button>
         </div>
     </div>
+
 </div>
 <script src="src/index.js"></script>
 </body>

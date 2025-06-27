@@ -33,6 +33,14 @@ fetch("https://www.thecocktaildb.com/api/json/v1/1/search.php?s=" + searchTerm)
         drinkDiv.innerHTML = `
             <h2>${drink.strDrink}</h2>
             <img src="${drink.strDrinkThumb}" alt="${drink.strDrink}" width="200">
+            <p><strong>Category:</strong> ${drink.strCategory}</p>
+            <p><strong>Alcoholic:</strong> ${drink.strAlcoholic}</p>
+            <p><strong>Glass:</strong> ${drink.strGlass}</p>
+            <p><strong>Ingredients:</strong></p>
+            <ul>
+                ${Object.keys(drink).filter(key => key.startsWith('strIngredient') && drink[key])
+                    .map(key => `<li>${drink[key]} - ${drink[`strMeasure${key.slice(-1)}`] || ''}</li>`).join('')}
+            </ul>
             <p>${drink.strInstructions}</p>
             <button class="favorite-button">Add to Favorites</button>`;
         resultsContainer.appendChild(drinkDiv);
