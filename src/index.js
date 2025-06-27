@@ -60,7 +60,7 @@ document.getElementById('header-button').addEventListener('click', function(e) {
 
 
 function surpriseMe() {
-    // Remove previous results
+
     const existingResults = document.getElementById('results');
     if (existingResults) {
         existingResults.remove();
@@ -69,7 +69,7 @@ function surpriseMe() {
 fetch("https://www.thecocktaildb.com/api/json/v1/1/random.php")
 .then(resp => resp.json())
 .then(data => {
-    const drink = data.drinks[0]; // Only one drink returned
+    const drink = data.drinks[0];
 
     const searchHeading = document.createElement('h1');
     searchHeading.id = 'search-heading';
